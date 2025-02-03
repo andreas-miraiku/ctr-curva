@@ -33,7 +33,7 @@ def plot_ctr_curves(brand_grouped, non_brand_grouped):
                              text=brand_grouped.apply(lambda row: f"Impressions: {row['total_impressions']}<br>Clicks: {row['total_clicks']}<br>Terms: {row['num_terms']}", axis=1)))
     fig.add_trace(go.Scatter(x=non_brand_grouped['Position'], y=non_brand_grouped['avg_CTR'] * 100,
                              mode='lines+markers', name='Non-Branded',
-                             line_shape='spline', line=dict(width=88),
+                             line_shape='spline', line=dict(width=8),
                              hoverinfo='text',
                              text=non_brand_grouped.apply(lambda row: f"Impressions: {row['total_impressions']}<br>Clicks: {row['total_clicks']}<br>Terms: {row['num_terms']}", axis=1)))
 
